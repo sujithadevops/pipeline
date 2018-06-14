@@ -1,31 +1,56 @@
+#!/usr/bin/python
 pipeline {
-agent any
+
+agent
+ any
 stages {
+
 stage ('compile stage') {
 
+
 steps {
 withMaven(maven : 'maven_3_3_9') {
+
 sh 'mvn clean compile'
-}
-}
+
 }
 
+ }
+
+} 
+
+
 stage (Testing Stage') {
+ 
 steps {
+
 withMaven(maven : 'maven_3_3_9') {
+
 sh 'mvn clean compile'
+
 }
-}
-}
+
+ }
+
+   }
+
 
 stage ('deploy stage') {
 
+
 steps {
+
 withMaven(maven : 'maven_3_3_9') {
+
 sh 'mvn deploy'
+
 }
+
+ }
+   
 }
-}
-}
-}
+
+ } 
+
+   }
 
