@@ -6,13 +6,21 @@ agent
 stages {
 
 stage ('compile stage') {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5f1c1506a3f97d6898788db46d3de8c29d114032
 steps {
 withMaven(maven : 'maven_3_3_9') {
 
 sh 'mvn clean compile'
+<<<<<<< HEAD
 
+=======
+}
+ }
+>>>>>>> 5f1c1506a3f97d6898788db46d3de8c29d114032
 }
 
  }
@@ -29,11 +37,16 @@ withMaven(maven : 'maven_3_3_9') {
 sh 'mvn clean compile'
 
 }
+<<<<<<< HEAD
 
  }
 
    }
 
+=======
+ }
+}
+>>>>>>> 5f1c1506a3f97d6898788db46d3de8c29d114032
 
 stage ('deploy stage') {
 
@@ -45,6 +58,7 @@ withMaven(maven : 'maven_3_3_9') {
 sh 'mvn deploy'
 
 }
+<<<<<<< HEAD
 
  }
    
@@ -53,4 +67,10 @@ sh 'mvn deploy'
  } 
 
    }
+=======
+ }
+  }
+  }
+     }
+>>>>>>> 5f1c1506a3f97d6898788db46d3de8c29d114032
 
